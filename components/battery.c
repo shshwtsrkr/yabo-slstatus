@@ -50,7 +50,7 @@
 			char *state;
 			char *symbol;
 		} map[] = {
-			{ "Charging",    "" },
+			{ "Charging",    "" },
 			{ "Discharging", "" },
 			{ "Full",        "" },
 		};
@@ -161,7 +161,7 @@
 			unsigned int state;
 			char *symbol;
 		} map[] = {
-			{ APM_AC_ON,      "" },
+			{ APM_AC_ON,      "" },
 			{ APM_AC_OFF,     "" },
 		};
 		struct apm_power_info apm_info;
@@ -227,7 +227,7 @@
 		switch(state) {
 			case 0:
 			case 2:
-				return "";
+				return "";
 			case 1:
 				return "";
 			default:
