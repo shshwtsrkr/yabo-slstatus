@@ -50,9 +50,9 @@
 			char *state;
 			char *symbol;
 		} map[] = {
-			{ "Charging",    "+" },
-			{ "Discharging", "-" },
-			{ "Full",        "o" },
+			{ "Charging",    "" },
+			{ "Discharging", "" },
+			{ "Full",        "" },
 		};
 		size_t i;
 		char path[PATH_MAX], state[12];
@@ -70,7 +70,7 @@
 				break;
 			}
 		}
-		return (i == LEN(map)) ? "?" : map[i].symbol;
+		return (i == LEN(map)) ? " " : map[i].symbol;
 	}
 
 	const char *
@@ -161,8 +161,8 @@
 			unsigned int state;
 			char *symbol;
 		} map[] = {
-			{ APM_AC_ON,      "+" },
-			{ APM_AC_OFF,     "-" },
+			{ APM_AC_ON,      "" },
+			{ APM_AC_OFF,     "" },
 		};
 		struct apm_power_info apm_info;
 		size_t i;
@@ -173,7 +173,7 @@
 					break;
 				}
 			}
-			return (i == LEN(map)) ? "?" : map[i].symbol;
+			return (i == LEN(map)) ? " " : map[i].symbol;
 		}
 
 		return NULL;
@@ -227,11 +227,11 @@
 		switch(state) {
 			case 0:
 			case 2:
-				return "+";
+				return "";
 			case 1:
-				return "-";
+				return "";
 			default:
-				return "?";
+				return " ";
 		}
 	}
 
