@@ -65,9 +65,9 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ netspeed_tx, "^c#77a6f2^    %sB/s ^c#d4d4d4^| ",  "wlan0"},
+	{ netspeed_tx, "^c#d4d4d4^        ^c#77a6f2^  %sB/s ^c#d4d4d4^| ",  "wlan0"},
 	{ netspeed_rx, "^c#ff7878^  %sB/s ^c#d4d4d4^| ",  "wlan0"},
-	{ run_command, "^c#f7d074^盛  %s ^c#d4d4d4^|^c#db7242^ 墳",  "light"},
+	{ run_command, "^c#f7d074^盛  %s ^c#d4d4d4^|^c#42f5f2^ 墳",  "light"},
 	{ run_command, "  %s ^c#d4d4d4^| ",  "awk -F'[][]' '/Left:/ { print $2 }' <(amixer sget Master)"},
 	{ battery_perc, "^c#58d631^%s", 		"BAT0"},
 	{ battery_state, " %s ", 		"BAT0"},
